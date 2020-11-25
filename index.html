@@ -4,19 +4,46 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/assets/style.css">
 	<title>Weather Dashboard API</title>
 </head>
 <body>
-	<div class="container">
-        <input id="" class="search-box" type="text" placeholder="Search for a city..."/>
-        <button id="btn" type="submit" class="btn"><i class="fa fa-search"></i></button>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="search-content">
+        <form class="search-form" method="GET">
+            <input class="search-input" type="text" placeholder="Search location city, state..."/>
+            <button class="searchBtn" type="button"></button>
+        </form>
+    </div>
+	<!-- <div class="col-container">
+        <div class="search">
+            <div class="row">
+                <h2>Search for a City: </h2>
+            </div>
+            <div class="row">
+                <input id="" class="searchBox" type="text" placeholder="Search for a city..."/>
+                <button id="searchBtn" class="srchBtn" type="submit"><i class="fa fa-search"></i></button>
+            </div> 
+    </div> -->
+
+    <div class="col-2 container">
+        <div class="forecast">
+            <div class="row">
+               <h2 class="cityState">City Name, State</h2> 
+               <h3 class="currentDate">Current Date</h3>
+            <!-- maybe weather icon -->
+            </div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" 
     crossorigin="anonymous"></script>
 
-    <script src="script.js"></script>
+    <script src="/assets/script.js"></script>
 </body>
 
 </html>

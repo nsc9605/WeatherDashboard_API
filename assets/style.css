@@ -1,4 +1,19 @@
-.body {
+* {
+    box-sizing: border-box;
+}
+
+header {
+    font-family: 'franklin Gothic Medium',;
+    text-align: center;
+    background-color: lavender;
+    border-radius: 0;
+    border-bottom: 5px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+
+body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;                   
     align-content: center;
 }
@@ -14,4 +29,11 @@
 .container {
     width: 100vh;
     height: 100vh;
+}
+
+.searchBox {
+    font-size: 12px;
+}
+.row {
+    font: 12;
 }
