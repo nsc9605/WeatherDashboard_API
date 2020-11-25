@@ -1,0 +1,17 @@
+.body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;                   
+    align-content: center;
+}
+
+.btn {
+    border-left: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgba(223, 202, 223, 0.87);
+    color: white;
+}
+
+.container {
+    width: 100vh;
+    height: 100vh;
+}
