@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-header {
+.jumbotron {
     font-family: 'franklin Gothic Medium',;
     text-align: center;
     background-color: lavender;
@@ -18,12 +18,20 @@ body {
     align-content: center;
 }
 
-.btn {
-    border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+i {
+    font-size: 20px;
+}
+
+
+.searchBtn {
+    /* border-left: 1px solid black; */
+    /* border-top-right-radius: 15px; */
+    /* border-bottom-right-radius: 15px; */
     background-color: rgba(223, 202, 223, 0.87);
     color: white;
+    height: 30px;
+    width: 7%;
+    font-size: 20px;
 }
 
 .container {
@@ -32,8 +40,26 @@ body {
 }
 
 .searchBox {
-    font-size: 12px;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
 }
+
 .row {
-    font: 12;
+    font: 18px;
+    height: 60%;
+}
+
+.col-3 {
+    background-color: lightblue;
+    font-size: 18px;
+    color: rgba(70, 67, 67, 0.925);
+    padding: 0px;
+    
+}
+
+.col-9 {
+    background-color: lightblue;
+    font-size: 18px;
+    color: rgba(70, 67, 67, 0.925);
 }

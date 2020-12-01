@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/assets/style.css">
-	<title>Weather Dashboard API</title>
-</head>
-<body>
-    <header>
-        <h1>Weather Dashboard</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/style.css" />
+    <title>Weather Dashboard API</title>
+  </head>
+  <body>
+    <header class="jumbotron">
+      <!-- Jumbotron -->
+      <div class="p-5 text-center bg-light">
+        <h1 class="mb-3">Weather Dashboard API</h1>
+        <p id="currentDate" class="lead"></p>
+      </div>
     </header>
 
-    <div class="search-content">
-        <form class="search-form" method="GET">
-            <input class="search-input" type="text" placeholder="Search location city, state..."/>
-            <button class="searchBtn" type="button"></button>
-        </form>
-    </div>
-	<!-- <div class="col-container">
-        <div class="search">
-            <div class="row">
-                <h2>Search for a City: </h2>
-            </div>
-            <div class="row">
-                <input id="" class="searchBox" type="text" placeholder="Search for a city..."/>
-                <button id="searchBtn" class="srchBtn" type="submit"><i class="fa fa-search"></i></button>
-            </div> 
-    </div> -->
-
-    <div class="col-2 container">
-        <div class="forecast">
-            <div class="row">
-               <h2 class="cityState">City Name, State</h2> 
-               <h3 class="currentDate">Current Date</h3>
-            <!-- maybe weather icon -->
-            </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3">
+          <div class="search-content">
+            <form class="search-form" method="GET">
+              <input
+                class="search-input"
+                type="text"
+                placeholder="Search location city, state..."
+              />
+              <button class="searchBtn" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+          <!-- <h2 class="city">City Name, State</h2> 
+               <h2 class="currentDate">Current Date</h2> -->
+          <!-- maybe weather icon -->
         </div>
+        <div class="col-9">
+          <div id="currentWeather">
+            <h2 class="city">City Name, State</h2>
+            <p class="temperature">Temperature:</p>
+            <p class="humidity">Humidity:</p>
+            <p class="wind">Wind Speed:</p>
+            <p class="uvIndex">UV Index:</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" 
-    crossorigin="anonymous"></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="/assets/script.js"></script>
-</body>
-
+  </body>
 </html>
