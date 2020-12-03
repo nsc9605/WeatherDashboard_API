@@ -4,7 +4,7 @@
 
 This application consists of a weather dashboard that runs in the browser and features dynamically updated HTML and CSS. Using the OpenWeather API, this retrieves data from any city typed in the search bar, and will save favorite cities/frequently used cities in localStorage as well as on the page after it is refreshed.
 
-Given the user wants to check the current weather for multiple cities so they can better plan their trip. This application will inform the user on current and future weather conditiions for the city they input, and it will be added to search history for easy access to check again. When the user searchers a city, they are also presented with :
+Given the user wants to check the current weather for multiple cities so they can better plan their trip. This application will inform the user on current and future weather conditions for the city they input, and it will be added to search history for easy access to check again. When the user searchers a city, they are also presented with :
 
   • City name
   • Current date
@@ -21,9 +21,9 @@ Like most weather applications, the user will be provided with a 5-day forecast 
 
 ## Installation
 
-Type in a specific city to seach for that weeks weather forecast.
+Type in a specific city to search for that weeks weather forecast.
 
-*Deployed link goes here
+[Click here to deploy application](https://nsc9605.github.io/WeatherDashboard_API/)
 
 
 ## Tech/Framework Used
@@ -35,20 +35,8 @@ Built with
 
 ## Usage/Demo Screenshot
 
-Provide instructions and examples for use. Include screenshots as needed. 
-
+<!-- Screenshot will go here -->
 ![Title of Document](Link-to-document.png)
-
-
-## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
-[Name of Youtube Tutorial](www.youtube.com)
 
 
 ## License

@@ -11,14 +11,16 @@ $(document).ready(function () {
     $("#currentDate").text(today.format("dddd MMMM Do YYYY, h:mm a"));
 
 
-    var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=40.7128&lon=74.0060&exclude=part&appid=ec69048cb2b0cadd73309ba3b0504619";
+    let queryURL = 'https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={APIkey}';
 
     
 $.ajax({
 url: queryURL,
 method: "GET",
 })
-.then(function(response){
-    
+.then(function(data){
+    let lat = JSON.stringify(data.lat);
+    let lon = JSON.stringify(data.lon);
+    let queryURL2 = ''
 })
-
+})
