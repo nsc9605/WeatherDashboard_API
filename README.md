@@ -6,13 +6,13 @@ This application consists of a weather dashboard that runs in the browser and fe
 
 Given the user wants to check the current weather for multiple cities so they can better plan their trip. This application will inform the user on current and future weather conditions for the city they input, and it will be added to search history for easy access to check again. When the user searchers a city, they are also presented with :
 
-  • City name
-  • Current date
-  • An icon representation of weather conditions
-  • Wind speed
-  • Humidity
-  • Temperature
-  • UV Index
+    • City name
+    • Current date
+    • An icon representation of weather conditions
+    • Wind speed
+    • Humidity
+    • Temperature
+    • UV Index
 
 When viewing the UV index option, different colors will indicate the conditions--favorable will be in a pastel green, moderate in a yellow color and severe will be in a hazardous red color.
 
