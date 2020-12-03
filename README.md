@@ -36,7 +36,7 @@ Built with
 ## Usage/Demo Screenshot
 
 <!-- Screenshot will go here -->
-![Screenshot to come](Link-to-document.png)
+![WeatherDashboard Screenshot](assets/images/weatherDashboard.png)
 
 
 ## License
