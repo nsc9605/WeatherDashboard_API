@@ -36,7 +36,7 @@ Built with
 ## Usage/Demo Screenshot
 
 <!-- Screenshot will go here -->
-![Title of Document](Link-to-document.png)
+![Screenshot to come](Link-to-document.png)
 
 
 ## License
