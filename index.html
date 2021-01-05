@@ -17,13 +17,13 @@
     <header class="jumbotron">
       <div class="p-5 text-center">
         <h1 class="mb-3">Weather Dashboard</h1>
-        <p id="currentDate" class="lead"></p>
+        <!-- <p id="currentDate" class="lead"></p> -->
       </div>
     </header>
     
     <div class="container-fluid">
-      <div class="row float-left">
-        <div class="col-3 mb-3">
+      <div class="row card-search">
+        <div class="mb-3 col-sm-8">
           <label>Enter a city:</label>
           <div class="search-content">
             <form class="search-form">
@@ -46,10 +46,14 @@
       <div class="row">
         <div class="col-9">
           <!-- Current weather card -->
-            <div id="currentWeather" class="container">
+            <div id="currentWeather" class="container card-current">
               <h2 class="card-title">Current Weather Conditions</h2>
+              <h4  id="currentDate"></h4>
               <h5 >City: <span id="currentCity"></span> </h5>
-              <!-- <p id="weatherDescription"></p> -->
+              <p id="weatherDescription"></p>
+              <p id="currentIcon">
+                <img src="" id="currentIcon"/>
+              </p>
               <p>Temperature: <span id="temp"></span></p>
               <p>Humidity: <span id="humidity"></span></p>
               <p>Wind Speed: <span id="wind"></span></p>
@@ -59,22 +63,19 @@
 
 
        <!-- 5-Day Forecast Info -->
-       <div class="row col-12">
-        <div class="container">
+       <!-- <div class="row col-12">
+        <div class="container card-fiveDay">
           <h3>5-Day Weather Forecast</h3>
           <div id="fiveDayContainers" class="container-fluid"></div>
         </div>
-      </div>
+      </div> -->
 
       <!-- <div id="fiveDayContainers" class="container-fluid"></div> -->
-
-      <!-- <div class="row">
-        <div class="col forecast"></div>
-        <div class="col forecast"></div>
-        <div class="col forecast"></div>
-        <div class="col forecast"></div>
-        <div class="col forecast"></div>
-      </div> -->
+      <div class="card text-white bg-info mb-3 col-sm-8" style="max-width: 15rem; display: inline-block">
+        <div class="card-header">5-Day Weather Forecast</div>
+        <div id="fiveDayContainers" class="card-body">
+      
+        </div>
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

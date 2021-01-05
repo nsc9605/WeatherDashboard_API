@@ -39,9 +39,24 @@ i {
     font-size: 20px;
 }
 
+/* .searchContainer {
+    padding: 10px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* border: solid 2px grey;
+    width: 20%;
+
+} */ 
+
 .container {
+    /* display: flex;
+    flex-wrap: wrap; */
+    margin-left: 10px;
+    border: solid 2px rgba(223, 202, 223, 0.87);
+    border-radius: 15px;
+    padding: 10px;
     width: 100vh;
-    height: 100vh;
+    height: 50vh;
 }
 
 .searchBox {
