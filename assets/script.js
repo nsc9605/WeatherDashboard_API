@@ -13,6 +13,31 @@ let uvIndexEl = "#uvIndex";
 let cityNameEl = "#cityName";
 let weatherDescription = "#weatherDescription";
 
+// Save search history to localStorage
+// function saveToStorage(newCitySearch) {
+//   let inputDataSaved = JSON.parse(localStorage.getItem("searchCity")) || [];
+//   inputDataSaved.push(newCitySearch);
+//   localStorage.setItem("searchCity:", JSON.stringify(inputDataSaved));
+// }
+function saveToStorage(cityInput) {
+  var inputDataSaved = JSON.parse(localStorage.getItem("searchCity")) || [];
+  inputDataSaved.push(cityInput);
+  localStorage.setItem("searchCity", JSON.stringify(inputDataSaved));
+  getWeather(cityInput);
+}
+
+// Save localStorage to page 
+function renderSaveBtns() {
+  let inputDataSaved = JSON.parse(localStorage.getItem("searchCity")) || [];
+  inputDataSaved.forEach(function (citySearches) {
+    let searchHistoryBtn = $("<button>");
+    searchHistoryBtn.addClass("btn btn-secondary searchHistoryBtn");
+    searchHistoryBtn.text(citySearches);
+    $("searchHistory").prepend(searchHistoryBtn);
+    console.log(searchHistoryBtn);
+  })
+}
+
 
 // Submit event
 document
@@ -21,8 +46,18 @@ document
     event.preventDefault();
     let cityInput = document.querySelector("#inputValue").value;
     console.log(cityInput);
+    // console.log(newCitySearch);
     getWeather(cityInput);
+    // saveToStorage(newCitySearch);
+    saveToStorage(cityInput);
+    renderSaveBtns(citySearches);
+
   });
+
+$(".searchHistoryBtn").click(function () {
+  var searchHistoryCity = $(this).text();
+  getWeather(searchHistoryCity);
+})
 
 // API call to get lat and lon coordinates
 function getWeather(cityName) {
@@ -86,7 +121,6 @@ function showFiveDayWeather(data) {
     document.querySelector("#fiveDayContainers").appendChild(day);
   }
 }
-
 
 
 // Pull current UVI from second api data to get current uvI
