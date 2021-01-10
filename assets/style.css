@@ -1,9 +1,9 @@
 * {
     box-sizing: border-box;
+    font-family: 'Yusei Magic', sans-serif;
 }
 
 .jumbotron {
-    font-family: 'Major Mono Display', monospace;;
     text-align: center;
     background-color: lavender;
     border-radius: 0;
@@ -15,7 +15,7 @@
 
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;                   
+    font-family: 'Yusei Magic', sans-serif;                   
     align-content: center;
 }
 
@@ -59,6 +59,10 @@ i {
     height: 50vh;
 }
 
+.searchHistory {
+    padding-top: 10px;
+}
+
 .searchBox {
     font-size: 20px;
     width: 100px;
@@ -87,10 +91,26 @@ i {
 
 .col-12 {
     padding: 10px;
-    align-content: right;
+    justify-items: space;
 }
 
 .inputValue {
     width: 100px;
 }
 
+.searchHistoryBtn {
+    height: 30px;
+    width: 60px;
+    border: 1px solid;
+}
+
+.card-current {
+    width: 75%;
+    justify-content: center;
+}
+
+.card-five {
+    justify-content: space;
+    justify-items: flex;
+    display: none;
+}
