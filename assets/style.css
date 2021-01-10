@@ -65,8 +65,7 @@ i {
 
 .searchBox {
     font-size: 20px;
-    width: 100px;
-    height: 100px;
+    height: 50px;
 }
 
 
@@ -110,7 +109,9 @@ i {
 }
 
 .card-five {
-    justify-content: space;
+    
     justify-items: flex;
     display: none;
+    /* margin: 20px; */
+   
 }

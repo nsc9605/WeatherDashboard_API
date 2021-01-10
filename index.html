@@ -28,30 +28,32 @@
       <div class="row card-search">
         <div class="col-12 col-md-2">
           <label>Enter a city:</label>
-          <div class="search-content">
+          <div class="search-content pb-3">
             <form class="search-form">
               <input
-                class="searchBox"
+                class="searchBox w-100 form-control"
                 id="inputValue"  
                 type="text"
                 name="cityInput"
                 placeholder="Search location city, state..."
               />
-              <button id="searchBtn">
-                <i class="fa fa-search"></i>
+            <div class="search-content-append">
+              <button id="searchBtn" class="btn btn-info">
+                <i class="fa fa-search text-white"></i>
               </button>
+            </div>
             </form>
         </div>
 
         <!-- Search history to save locally -->
-        <div id="citySearches" class="searchHistory w-100 btn-group-vertical">
+        <div id="citySearches" class="searchHistory w-50 btn-group-vertical">
           <h4>Searched Cities</h4>
           <button id="searchHistoryBtn" class="searchHistoryBtn btn"></button>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-9 col-md-10">
+        <div class="col-12 col-md-10">
           <!-- <div class="card d-flex flex-column col-sm-10 text-white bg-info mb-3 justify-content-between" style="max-width: 15rem; display: inline-block">
             <div class="card-header">Current Weather</div>
             <div id="currentWeather" class="card-body"></div>
@@ -80,12 +82,14 @@
           <div id="fiveDayContainers" class="container-fluid"></div>
         </div> -->
       
-          <div class="card-five d-flex flex-column col-12 col-md-10 text-white bg-info mb-3 justify-content-between" style="max-width: 15rem; display: inline-block">
+          <div class="card-five d-flex flex-column col-md-10 text-white bg-info justify-content-between">
             <div class="card-header">
               <h2>5-Day Weather Forecast</h2>
             </div>
+            <div class="card mb-2 bg-info text-white">
             <div id="fiveDayContainers" class="card-body"></div>
           </div>
+        </div>
       </div>
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
