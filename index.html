@@ -53,14 +53,12 @@
       </div>
 
       <div class="row">
-        <div class="col-12 col-md-10">
-          <!-- <div class="card d-flex flex-column col-sm-10 text-white bg-info mb-3 justify-content-between" style="max-width: 15rem; display: inline-block">
-            <div class="card-header">Current Weather</div>
-            <div id="currentWeather" class="card-body"></div>
-          </div>  -->
+        <div class="col-12">
+          <h2>Current Weather Conditions</h2>
+          
           <!-- Current weather card -->
             <div id="currentWeather" class="container card-current bg-info text-white mb-3 justify-content-center">              
-              <h2 class="card-title">Current Weather Conditions</h2>
+              
               <h4 id="currentDate"></h4>
               <h5>City: <span id="currentCity"></span></h5>
               <p class="right">
@@ -72,22 +70,16 @@
               <p>Wind Speed: <span id="wind"></span></p>
               <p>UV Index: <span id="currentUVI"></span></p>
             </div> 
-        </div>
+      </div>
 
     
        <!-- 5-Day Forecast Info -->
-       <div class="row col-12">
-        <!-- <div class="container card-fiveDay">
-          <h3>5-Day Weather Forecast</h3>
-          <div id="fiveDayContainers" class="container-fluid"></div>
-        </div> -->
-      
-          <div class="card-five d-flex flex-column col-md-10 text-white bg-info justify-content-between">
-            <div class="card-header">
-              <h2>5-Day Weather Forecast</h2>
-            </div>
-            <div class="card mb-2 bg-info text-white">
-            <div id="fiveDayContainers" class="card-body"></div>
+      <div class="row">
+        <div class="col-12">
+        <h2>5-Day Weather Forecast</h2>
+          <div id="fiveDayRow">
+            <div id="fiveDayContainers" class="card-body col-6 mb-3 bg-info text-white d-flex flex-column justify-content-between"></div>
+          <!-- </div> -->
           </div>
         </div>
       </div>

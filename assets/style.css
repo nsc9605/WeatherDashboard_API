@@ -89,7 +89,7 @@ i {
 }
 
 .col-12 {
-    padding: 10px;
+    /* padding: 10px; */
     justify-items: space;
 }
 
@@ -108,10 +108,9 @@ i {
     justify-content: center;
 }
 
-.card-five {
+/* .card-five {
     
     justify-items: flex;
-    display: none;
+    display: none; */
     /* margin: 20px; */
    
-}

@@ -1,5 +1,5 @@
 console.log("works");
-// window.onload = function() {
+
 // Global Variables
 let apiKey = "c6c3415f70d6fade0d7d3230231ef65e";
 // let currentDate = moment().format("MM/DD/YYYY");
@@ -89,21 +89,6 @@ function getWeather(cityName) {
 renderSaveBtns();
 // Show data on page
 function showWeatherForToday(cityName, data) {
-//  let currentDate = moment().format("MMMM Do, YYYY");
-  // let currentDay = document.createElement("div");
-  //   currentDay.innerHTML = [
-  //     `<h4>${currentDate}</h4>
-  //     <h5>City: ${cityName}</h5>span></h5>
-  //     <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
-  //     <p>${data.weather[0].description}</p>
-  //     <p>Temperature: ${data.main[0].temp}°F</p>
-  //     <p>High Temp: ${data.main[0].temp_max}°F</p>
-  //     <p>Low Temp: ${data.main[0].temp_min}°F</p>
-  //     <p>Humidity: ${data.main[0].humidity}%</p>
-  //     <p>Wind Speed: ${data.wind[0].wind_speed}</p>
-  //     <p>UV Index: ${data.current[0].uvi}</p>`,
-  //   ];
-  //   document.querySelector("#currentWeather").appendChild(currentDay);
 
   document.querySelector("#currentDate").innerHTML = moment().format("MMMM Do, YYYY");
   document.querySelector("#weatherDescription").innerHTML = data.weather[0].description;
@@ -138,10 +123,12 @@ function showFiveDayWeather(data) {
       // currentUVI.innerHTML = `UV Index: ${data.current.uvi}`;
 
 
-
   // For loop to pull weather for 5 day forecast
+  let fiveDayRow = document.querySelector("#fiveDayRow");
   for (var i = 0; i < 5; i++) {
-
+    // for (var i = 0; i < fiveDayRow.length; i++) {
+    //   var j = i + 1;
+      // var dailyBoxes = document.querySelector("#fiveDayRow" + j);
     // Set time/date for 5 day forecast
     let forecastDates = moment().add(i + 1, 'days').format("ddd MM/DD/YYYY");
 
@@ -166,3 +153,21 @@ function showFiveDayWeather(data) {
 }
 
 // };
+
+// TO FORMAT LIKE 5-DAY-WEATHER
+
+//  let currentDate = moment().format("MMMM Do, YYYY");
+  // let currentDay = document.createElement("div");
+  //   currentDay.innerHTML = [
+  //     `<h4>${currentDate}</h4>
+  //     <h5>City: ${cityName}</h5>span></h5>
+  //     <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
+  //     <p>${data.weather[0].description}</p>
+  //     <p>Temperature: ${data.main[0].temp}°F</p>
+  //     <p>High Temp: ${data.main[0].temp_max}°F</p>
+  //     <p>Low Temp: ${data.main[0].temp_min}°F</p>
+  //     <p>Humidity: ${data.main[0].humidity}%</p>
+  //     <p>Wind Speed: ${data.wind[0].wind_speed}</p>
+  //     <p>UV Index: ${data.current[0].uvi}</p>`,
+  //   ];
+  //   document.querySelector("#currentWeather").appendChild(currentDay);
