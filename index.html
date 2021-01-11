@@ -26,7 +26,7 @@
     
     <div class="container-fluid">
       <div class="row card-search">
-        <div class="col-12 col-md-2">
+        <div class="col-12">
           <label>Enter a city:</label>
           <div class="search-content pb-3">
             <form class="search-form">
@@ -46,10 +46,9 @@
         </div>
 
         <!-- Search history to save locally -->
-        <div id="citySearches" class="searchHistory w-50 btn-group-vertical">
-          <h4>Searched Cities</h4>
-          <button id="searchHistoryBtn" class="searchHistoryBtn btn"></button>
-        </div>
+        <h4>Searched Cities: </h4>
+          <div id="searchHistoryContainer"></div>
+       
       </div>
 
       <div class="row">
@@ -75,12 +74,11 @@
     
        <!-- 5-Day Forecast Info -->
       <div class="row">
-        <div class="col-12">
+        <div class="forecast-info">
         <h2>5-Day Weather Forecast</h2>
-          <div id="fiveDayRow">
-            <div id="fiveDayContainers" class="card-body col-6 mb-3 bg-info text-white d-flex flex-column justify-content-between"></div>
-          <!-- </div> -->
-          </div>
+          <!-- <div id="fiveDayRow"> -->
+            <div id="fiveDayContainers"></div>
+          
         </div>
       </div>
 

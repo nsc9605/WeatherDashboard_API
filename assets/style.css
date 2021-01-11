@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Yusei Magic', sans-serif;
+    padding: 10px
 }
 
 .jumbotron {
@@ -39,14 +40,10 @@ i {
     font-size: 20px;
 }
 
-/* .searchContainer {
-    padding: 10px;
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* border: solid 2px grey;
-    width: 20%;
-
-} */ 
+ .searchHistoryContainer {
+     display: block;
+     justify-content: space-between;
+ }
 
 .container {
     /* display: flex;
@@ -89,8 +86,8 @@ i {
 }
 
 .col-12 {
-    /* padding: 10px; */
-    justify-items: space;
+    padding: 10px;
+    /* justify-items: space; */
 }
 
 .inputValue {
@@ -108,9 +105,23 @@ i {
     justify-content: center;
 }
 
-/* .card-five {
-    
-    justify-items: flex;
-    display: none; */
-    /* margin: 20px; */
-   
+#fiveDayContainers {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+#fiveDayContainers >div {
+    background-color: rgb(53, 155, 156);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.forecast-info {
+    padding: 10px;
+    margin: 10px;;
+}
+
+
