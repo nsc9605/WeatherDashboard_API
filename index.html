@@ -25,60 +25,61 @@
     </header>
     
     <div class="container-fluid">
-      <div class="row card-search">
-        <div class="col-12">
+      <div class="card-search">
+        <div class="col-3">
           <label>Enter a city:</label>
-          <div class="search-content pb-3">
+          <div class="search-content">
             <form class="search-form">
               <input
-                class="searchBox w-100 form-control"
+                class="searchBox form-control"
                 id="inputValue"  
                 type="text"
                 name="cityInput"
                 placeholder="Search location city, state..."
               />
-            <div class="search-content-append">
-              <button id="searchBtn" class="btn btn-info">
-                <i class="fa fa-search text-white"></i>
-              </button>
+            <div class="search-content">
+                <button id="searchBtn">
+                  <i class="fa fa-search text-white"></i>
+                </button>
             </div>
             </form>
-        </div>
+          </div>
+       
+      
 
         <!-- Search history to save locally -->
-        <h4>Searched Cities: </h4>
-          <div id="searchHistoryContainer"></div>
-       
-      </div>
-
+           <h4>Searched Cities: </h4>
+            <div id="searchHistoryContainer"></div>
+        </div>
+        
       <div class="row">
-        <div class="col-12">
+        <div class="col-9">
           <h2>Current Weather Conditions</h2>
           
           <!-- Current weather card -->
-            <div id="currentWeather" class="container card-current bg-info text-white mb-3 justify-content-center">              
-              
+            <div id="currentWeather" class="card-current">
               <h4 id="currentDate"></h4>
               <h5>City: <span id="currentCity"></span></h5>
-              <p class="right">
-                <img src="" class="" id="currentIcon"/>
-              </p>
+              <div id="currentIcon"><img src="" /></div>
               <p>Weather Conditions: <span id="weatherDescription"></span></p>
               <p>Temperature: <span id="temp"></span></p>
               <p>Humidity: <span id="humidity"></span></p>
               <p>Wind Speed: <span id="wind"></span></p>
               <p>UV Index: <span id="currentUVI"></span></p>
             </div> 
+          </div>
       </div>
 
     
        <!-- 5-Day Forecast Info -->
       <div class="row">
-        <div class="forecast-info">
-        <h2>5-Day Weather Forecast</h2>
-          <!-- <div id="fiveDayRow"> -->
-            <div id="fiveDayContainers"></div>
-          
+        <div class="col-12">
+          <div class="forecast-info">
+          <h2>5-Day Weather Forecast</h2>
+            <!-- <div id="fiveDayRow"> -->
+              <div id="fiveDayContainers"></div>
+            
+          </div>
         </div>
       </div>
 
