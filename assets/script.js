@@ -32,7 +32,6 @@ function renderSaveBtns() {
       .appendChild(searchHistoryBtn);
   });
 };
-
 renderSaveBtns();
 
 // Submit event
@@ -47,6 +46,8 @@ document
       getWeather(cityInput);
       saveToStorage(cityInput);
       renderSaveBtns();
+
+      uviBadge(data);
     }
   });
 
@@ -62,6 +63,7 @@ savedCityButtons.forEach(function (eachButton) {
 // API call to get lat and lon coordinates
 function getWeather(cityName) {
   console.log(cityName);
+  console.log(uviBadge)
   let queryURLForToday = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`;
 
   fetch(queryURLForToday)
@@ -150,5 +152,6 @@ function uviBadge(data) {
     currentUVI.addClass("badge badge-danger");
   };
   // currentUVI.innerHTML = `UV Index: ${data.current.uvi}`;
-  document.querySelector("#currentUVI").appendChild(currentUVI);
+  document.querySelector("#currentUVI").appendChild(uviBadge);
 };
+

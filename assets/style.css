@@ -10,12 +10,13 @@
     border-radius: 0;
     border-bottom: 5px solid black;
     height: 200px;
-    width: 100%;
+    width: 100% auto;
     padding: 10px;
 }
 
 
 body {
+   
     font-family: 'Yusei Magic', sans-serif;                   
     align-content: center;
 }
@@ -115,7 +116,7 @@ h5 {
 }
 
 .card-current {
-    width: 50vh;
+    width: 40vh;
     justify-content: flex;
     right: 0;
     align-items: center;
@@ -153,18 +154,18 @@ h5 {
   }
 
  /* MEDIA QUERY for responsive design */
- @media only screen and (max-width: 600px) {
+  /* @media only screen and (max-width: 600px) {
     .input-field .prefix ~ input {
       width: 80%;
       width: calc(100% - 3rem);
-    }
-  }
+    } */
+  /* } */
   
-  @media only screen and (max-width: 600px) {
+  /* @media only screen and (max-width: 600px) {
     .input-field .prefix ~ input {
       width: 50%;
     }
-  }
+  } */
   
   @media only screen and (max-width: 480px) {
     .row-container .card {
@@ -177,4 +178,7 @@ h5 {
       width: 400px;
     }
   }
-
+  
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+  }
