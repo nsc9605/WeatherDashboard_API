@@ -20,7 +20,6 @@
     <header class="jumbotron">
       <div class="p-5 text-center">
         <h1 class="mb-3">Weather Dashboard</h1>
-        <!-- <p id="currentDate" class="lead"></p> -->
       </div>
     </header>
     
@@ -55,17 +54,16 @@
       <div class="row">
         <div class="col-9">
           <h2>Current Weather Conditions</h2>
-          
           <!-- Current weather card -->
             <div id="currentWeather" class="card-current">
               <h4 id="currentDate"></h4>
               <h5>City: <span id="currentCity"></span></h5>
-              <div id="currentIcon"><img src="" /></div>
+              <div id="currentIcon"><img src=""  class="center"/></div>
               <p>Weather Conditions: <span id="weatherDescription"></span></p>
               <p>Temperature: <span id="temp"></span></p>
               <p>Humidity: <span id="humidity"></span></p>
               <p>Wind Speed: <span id="wind"></span></p>
-              <p>UV Index: <span id="currentUVI"></span></p>
+              <p>UV Index: <span id="currentUVI" class="badge"></span></p>
             </div> 
           </div>
       </div>
@@ -76,7 +74,6 @@
         <div class="col-12">
           <div class="forecast-info">
           <h2>5-Day Weather Forecast</h2>
-            <!-- <div id="fiveDayRow"> -->
               <div id="fiveDayContainers"></div>
             
           </div>
@@ -84,9 +81,6 @@
       </div>
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
       <script src="assets/script.js"></script>
   

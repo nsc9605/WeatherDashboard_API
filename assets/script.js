@@ -1,7 +1,6 @@
-console.log("works");
+
 // Global Variables
 let apiKey = "c6c3415f70d6fade0d7d3230231ef65e";
-// let currentDate = moment().format("MM/DD/YYYY");
 let lat = "";
 let lon = "";
 let currentCity = "#currentCity";
@@ -11,12 +10,14 @@ let windEl = "#wind";
 let uvIndexEl = "#uvIndex";
 let cityNameEl = "#cityName";
 let weatherDescription = "#weatherDescription";
+
 // Save to localStorage
 function saveToStorage(cityInput) {
   var inputDataSaved = JSON.parse(localStorage.getItem("searchCity")) || [];
   inputDataSaved.push(cityInput);
   localStorage.setItem("searchCity", JSON.stringify(inputDataSaved));
-}
+};
+
 // Save localStorage to page
 function renderSaveBtns() {
   let inputDataSaved = JSON.parse(localStorage.getItem("searchCity")) || [];
@@ -30,7 +31,8 @@ function renderSaveBtns() {
       .querySelector("#searchHistoryContainer")
       .appendChild(searchHistoryBtn);
   });
-}
+};
+
 renderSaveBtns();
 
 // Submit event
@@ -47,6 +49,7 @@ document
       renderSaveBtns();
     }
   });
+
 // Click event for each saved city button - dynamic
 var savedCityButtons = document.querySelectorAll(".saved-city-button");
 savedCityButtons.forEach(function (eachButton) {
@@ -55,6 +58,7 @@ savedCityButtons.forEach(function (eachButton) {
     getWeather(city);
   });
 });
+
 // API call to get lat and lon coordinates
 function getWeather(cityName) {
   console.log(cityName);
@@ -78,7 +82,7 @@ function getWeather(cityName) {
           showFiveDayWeather(fiveDayData);
         });
     });
-}
+};
 
 // Show data on page
 function showWeatherForToday(cityName, data) {
@@ -95,9 +99,10 @@ function showWeatherForToday(cityName, data) {
   document.querySelector("#humidity").innerHTML = data.main.humidity + "%";
   document.querySelector("#wind").innerHTML =
     Math.round(data.wind.speed) + "mph";
+
   $("#card-text").empty();
-  // $("#card-text").append(currentWeather);
-}
+};
+
 // five day
 function showFiveDayWeather(data) {
   // Grabs UVI info from 5-day forecast API
@@ -105,16 +110,7 @@ function showFiveDayWeather(data) {
     "#currentUVI"
   ).innerHTML = Math.round(data.current.uvi));
 
-  // SET BADGES FOR UVI HIGH / LOW
-  // if (currentUVI <= 2) {
-  //     currentUVI.addClass("badge badge-success");
-  //     } else if (currentUVI > 2 && currentUVI <= 5) {
-  //       currentUVI.addClass("badge badge-warning");
-  //     } else if (currentUVI > 5) {
-  //       currentUVI.addClass("badge badge-danger");
-  //     };
-  currentUVI.innerHTML = `UV Index: ${data.current.uvi}`;
-
+  // Set loop for 5-day weather
   document.querySelector("#fiveDayContainers").innerHTML = "";
   for (var i = 0; i < 5; i++) {
     let forecastDates = moment()
@@ -126,7 +122,7 @@ function showFiveDayWeather(data) {
       `<h5>${forecastDates}</h5>
       <img src="https://openweathermap.org/img/wn/${
         data.daily[i].weather[0].icon
-      }@2x.png" style="center">
+      }@2x.png">
       <p>${data.daily[i].weather[0].description}</p>
       <p>Temperature: ${Math.round(data.daily[i].temp.day)}°F</p>
       <p>High Temp: ${Math.round(data.daily[i].temp.max)}°F</p>
@@ -135,6 +131,24 @@ function showFiveDayWeather(data) {
       <br>`,
     ];
     document.querySelector("#fiveDayContainers").appendChild(day);
-    $("#card-text").empty();
+    
   }
-}
+  $("#card-text").empty();
+};
+
+  // SET BADGES FOR UVI HIGH / LOW
+function uviBadge(data) {
+  let currentUVI = (document.querySelector(
+    "#currentUVI"
+  ).innerHTML = Math.round(data.current.uvi));
+
+  if (currentUVI <= 2) {
+    currentUVI.addClass("badge badge-success");
+  } else if (currentUVI > 2 && currentUVI <= 5) {
+    currentUVI.addClass("badge badge-warning");
+  } else if (currentUVI > 5) {
+    currentUVI.addClass("badge badge-danger");
+  };
+  // currentUVI.innerHTML = `UV Index: ${data.current.uvi}`;
+  document.querySelector("#currentUVI").appendChild(currentUVI);
+};
