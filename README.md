@@ -19,6 +19,12 @@ When viewing the UV index option, different colors will indicate the conditions-
 Like most weather applications, the user will be provided with a 5-day forecast with the dates associated with the weather conditions (temperature, humidity, wind speed, etc.) Each time the weather dashboard is opened, the user is presented with the forecast of the last city searched.
 
 
+## Usage/Demo Screenshot
+
+<!-- Screenshot will go here -->
+![WeatherDashboard Screenshot](assets/images/Weather_Dash.gif)
+
+
 ## Installation
 
 Type in a specific city to search for that weeks weather forecast.
@@ -31,12 +37,6 @@ Type in a specific city to search for that weeks weather forecast.
 Built with
 
 •VS Code
-
-
-## Usage/Demo Screenshot
-
-<!-- Screenshot will go here -->
-![WeatherDashboard Screenshot](assets/images/weatherDashboard.png)
 
 
 ## License

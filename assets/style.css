@@ -7,7 +7,6 @@
 .jumbotron {
     text-align: center;
     background-color: lavender;
-    border-radius: 0;
     border-bottom: 5px solid black;
     height: 200px;
     width: 100% auto;
@@ -106,7 +105,7 @@ h5 {
 }
 
 #inputValue {
-    width: 100px;
+    width: 70%;
 }
 
 #searchBtn {
@@ -116,14 +115,18 @@ h5 {
 }
 
 .card-current {
-    width: 40vh;
-    justify-content: flex;
-    right: 0;
+    display: grid;
+    grid: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    min-width: 40vh;
+    width: 100%;
     align-items: center;
     background-color: rgba(31, 187, 189, 0.927);
     color: white;
-    /* text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.831); */
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.831);
     font-size: 30px;
 }
@@ -132,13 +135,16 @@ h5 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    min-width: 40vh;
 }
 
 #fiveDayContainers >div {
     background-color: rgba(31, 187, 189, 0.927);
     color: white;
-    /* padding: 10px; */
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.831);
 }
 
@@ -153,32 +159,28 @@ h5 {
     display: table;
   }
 
- /* MEDIA QUERY for responsive design */
-  /* @media only screen and (max-width: 600px) {
-    .input-field .prefix ~ input {
-      width: 80%;
-      width: calc(100% - 3rem);
-    } */
-  /* } */
-  
-  /* @media only screen and (max-width: 600px) {
-    .input-field .prefix ~ input {
-      width: 50%;
-    }
-  } */
-  
-  @media only screen and (max-width: 480px) {
-    .row-container .card {
-      width: 100px;
-    }
+
+  /* Responsive Design  */
+  @media screen and (max-width:900px) {
+    #fiveDayContainers {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 1em;
+      }
   }
-  
-  @media only screen and (max-width: 767px) {
-    .row-container .card {
-      width: 400px;
-    }
+
+  @media screen and (max-width:576px) {
+    #fiveDayContainers {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 1em;
+      }
   }
-  
-  @media (min-width: 900px) {
-    .cards { grid-template-columns: repeat(3, 1fr); }
+
+  @media screen and (max-width:576px) {
+    .card-current {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 1em;
+      }
   }
