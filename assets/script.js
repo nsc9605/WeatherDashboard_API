@@ -46,8 +46,7 @@ document
       getWeather(cityInput);
       saveToStorage(cityInput);
       renderSaveBtns();
-
-      uviBadge(data);
+      
     }
   });
 
@@ -135,23 +134,25 @@ function showFiveDayWeather(data) {
     document.querySelector("#fiveDayContainers").appendChild(day);
     
   }
+  uviBadge(data);
   $("#card-text").empty();
 };
 
   // SET BADGES FOR UVI HIGH / LOW
 function uviBadge(data) {
-  let currentUVI = (document.querySelector(
+  let currentUVI = $(
     "#currentUVI"
-  ).innerHTML = Math.round(data.current.uvi));
+  );
+  currentUVI.innerHTML = Math.round(data.current.uvi);
 
-  if (currentUVI <= 2) {
+  if (data.current.uvi <= 2) {
     currentUVI.addClass("badge badge-success");
-  } else if (currentUVI > 2 && currentUVI <= 5) {
+  } else if (data.current.uvi > 2 && data.current.uvi <= 5) {
     currentUVI.addClass("badge badge-warning");
-  } else if (currentUVI > 5) {
+  } else if (data.current.uvi > 5) {
     currentUVI.addClass("badge badge-danger");
   };
   // currentUVI.innerHTML = `UV Index: ${data.current.uvi}`;
-  document.querySelector("#currentUVI").appendChild(uviBadge);
+  // document.querySelector("#currentUVI").appendChild(uviBadge);
 };
 
