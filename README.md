@@ -31,10 +31,11 @@ Type in a specific city to search for that weeks weather forecast.
 
 [Click here to deploy application](https://nsc9605.github.io/WeatherDashboard_API/)
 
+## Contribution
+
+Assistance and guidance from my tutor [Eric Wallen](https://github.com/ericwallen)
 
 ## Tech/Framework Used
-
-Built with
 
 •VS Code
 
