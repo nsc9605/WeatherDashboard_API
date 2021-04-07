@@ -22,7 +22,7 @@ Like most weather applications, the user will be provided with a 5-day forecast 
 ## Usage/Demo Screenshot
 
 <!-- Screenshot will go here -->
-![WeatherDashboard Screenshot](assets/images/Weather_Dash.gif)
+![WeatherDashboard Screenshot](assets/images/Weather_Dashboard.gif)
 
 
 ## Installation

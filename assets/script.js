@@ -21,7 +21,7 @@
   // Save localStorage to page
   function renderSaveBtns() {
     let inputDataSaved = JSON.parse(localStorage.getItem("searchCity")) || [];
-    if (inputDataSaved === null);
+    
 
     document.querySelector("#searchHistoryContainer").innerHTML = "";
     inputDataSaved.forEach(function (citySearches) {
@@ -34,8 +34,14 @@
         .prepend(searchHistoryBtn);
     });
   }
+  function renderLastCity() {
+    let inputDataSaved = JSON.parse(localStorage.getItem("searchCity")) || [];
+    if (inputDataSaved.length > 0) {
+      getWeather(inputDataSaved[inputDataSaved.length - 1]);
+    };
+  }
   renderSaveBtns();
-
+  renderLastCity();
  
   // Submit event
   document
